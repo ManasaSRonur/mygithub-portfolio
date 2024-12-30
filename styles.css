@@ -6,7 +6,7 @@
     --light-gray: #a8a8a8;
     --lightest-gray: #d4d4d4;
     --white: #ffffff;
-    --yellow: #c4c846;
+    --yellow: #08e8de;
     --font-mono: 'SF Mono', 'Fira Code', monospace;
     --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', sans-serif;
 }
@@ -402,7 +402,7 @@ h3::after {
 .skill-header i {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #c4c846;
+    color: #08e8de;
 }
 
 .skill-header h4 {
@@ -428,7 +428,7 @@ h3::after {
 .skill-dot {
     width: 6px;
     height: 6px;
-    background-color: #c4c846;
+    background-color: #08e8de;
     border-radius: 50%;
     margin-right: 0.75rem;
 }
