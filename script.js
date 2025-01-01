@@ -32,10 +32,20 @@ const experienceData = {
   }
 };
 
+// Navigation bar
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
+
+// Close the menu when any link is clicked
+const navLinks = document.querySelectorAll('.nav-links a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinksContainer = document.querySelector('.nav-links');
+        navLinksContainer.classList.remove('active');
+    });
+});
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {

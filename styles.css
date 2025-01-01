@@ -25,56 +25,65 @@ body {
     text-align: justify;
 }
 
-/* Navigation */
+/* Base Navigation Styles */
 #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-    z-index: 100;
-    padding: 1rem 0;
-}
-
-.nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
 }
 
-.logo {
-    color: var(--yellow);
-    font-family: var(--font-mono);
-    font-size: 1.5rem;
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
 }
 
 .nav-links a {
-    color: var(--lightest-gray);
     text-decoration: none;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--yellow);
+    color: #f0a500;
 }
-/* Mobile styles */
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Menu for Mobile */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 50%;
+        position: absolute;
+        top: 60px;
+        right: 0;  /* Align to the right */
+        left: auto; /* Reset left to avoid conflicts */
+        background-color: #333;
         text-align: center;
+        padding: 10px 0;
+        z-index: 100;
     }
 
     .nav-links.active {
@@ -83,13 +92,11 @@ body {
 
     .hamburger {
         display: block;
-        cursor: pointer;
     }
-}
 
-/* Hide hamburger for desktop */
-.hamburger {
-    display: none;
+    .nav-links li {
+        margin: 15px 0;
+    }
 }
 
 /* Main Content */
