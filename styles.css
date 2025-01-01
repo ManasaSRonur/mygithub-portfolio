@@ -68,6 +68,29 @@ body {
 .nav-links a:hover {
     color: var(--yellow);
 }
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Hide hamburger for desktop */
+.hamburger {
+    display: none;
+}
 
 /* Main Content */
 main {
@@ -365,6 +388,29 @@ h3::after {
     display: flex;
     list-style: none;
     gap: 2rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .education-grid {
+        grid-template-columns: 1fr;  /* Stack items vertically */
+    }
+
+    .education-card {
+        text-align: center;
+        padding: 15px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .education-header .education-date {
+        display: block;
+        margin-top: 5px;
+    }
 }
 
 /* Skills Section Styles */
