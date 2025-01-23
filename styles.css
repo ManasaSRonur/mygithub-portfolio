@@ -816,3 +816,50 @@ footer {
         justify-content: center;
     }
 }
+
+.certifications-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* To handle responsiveness */
+}
+
+.certification-card {
+    border: 1px solid var(--lighter-black);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--light-black);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px; /* Set a fixed width for cards */
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.certification-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.certification-card h4 {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.certification-card p {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--yellow);
+}

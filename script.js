@@ -150,3 +150,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Example data for certifications (can be replaced with API or other data sources)
+    const certifications = [
+        {
+            title: "Solution Architect Associate",
+            issuer: "AWS",
+            earned: "September 2021",
+            image: "images/AWS.png",
+            alt: "AWS Certified: Solution Architect"
+        },
+        {
+            title: "Power BI Data Analyst",
+            issuer: "Microsoft",
+            earned: "November 2021",
+            image: "images/pbi.png",
+            alt: "Microsoft Certified: Power BI"
+        }
+       
+    ];
+
+    // Target the certifications grid container
+    const certificationsGrid = document.querySelector('.certifications-grid');
+
+    if (certificationsGrid) {
+        // Clear any existing content
+        certificationsGrid.innerHTML = '';
+
+        // Dynamically generate certification cards
+        certifications.forEach(cert => {
+            const card = document.createElement('div');
+            card.className = 'certification-card';
+
+            // Add inner HTML for the card
+            card.innerHTML = `
+                <div class="certification-image">
+                    <img src="${cert.image}" alt="${cert.alt}" style="width: 100px; height: 100px; object-fit: contain;">
+                </div>
+                <h4>${cert.title}</h4>
+                <p>Issued by ${cert.issuer}</p> 
+                <p> Earned: ${cert.earned}</p>
+            `;
+
+            // Append the card to the grid
+            certificationsGrid.appendChild(card);
+        });
+    }
+});
+
+
